@@ -1,5 +1,7 @@
 <template>
-  <div class="flex-center">{{ text }}</div>
+  <h2 class="flex-center">
+    {{ text }}
+  </h2>
 </template>
 
 <script>
@@ -12,7 +14,7 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang="css" scoped>
   .flex-center {
     display: flex;
     justify-content: center;

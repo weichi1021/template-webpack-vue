@@ -7,9 +7,7 @@ const config = {
   resolve: {
     extensions: ['.vue', '.js'],
   },
-  entry: {
-    main : path.resolve(__dirname, './src/main.js'),
-  },
+  entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: './js/[name].js'
@@ -31,6 +29,7 @@ const config = {
         test: /\.css$/,
         use: [
           'vue-style-loader',
+          'style-loader',
           'css-loader'
         ]
       },
@@ -38,6 +37,7 @@ const config = {
         test: /\.s(c|a)ss$/, 
         use: [
           'vue-style-loader', 
+          'style-loader', 
           'css-loader',
           'sass-loader'
         ] 
@@ -47,8 +47,7 @@ const config = {
   plugins: [
     new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
-      inject: 'body',
-      template: './src/index.html'
+      template: './public/index.html'
     })
   ]
 };
