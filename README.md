@@ -3,6 +3,6 @@
 ## Build Setup
 ```
 $　npm install
-$ npm run dev
-$ npm run build
+$　npm run dev
+$　npm run build
 ```
